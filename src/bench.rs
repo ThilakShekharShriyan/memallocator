@@ -115,7 +115,8 @@ fn footer() {
   so a fast path below that shows up as 0 or 41.
   Ordering on one contended atomic is mostly the cache-line transfer, which
   is why relaxed and seqcst are close. False sharing is the line measurement.
-  GPU bump is one device atomic add. GPU freelist is a device CAS, pop only."
+  GPU bump is one device atomic add. GPU freelist is a device CAS, pop only.
+  Delete, group commit, and cache-size runs: cargo run --release -- gaps"
     );
 }
 

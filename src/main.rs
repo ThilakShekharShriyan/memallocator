@@ -11,6 +11,10 @@ fn main() {
             }
         }
         "quick" => memallocator::bench::run(Duration::from_millis(80), false),
+        "gaps" => memallocator::gaps::run(Duration::from_millis(200)),
+        "epoch" => memallocator::gaps::run_epoch(Duration::from_millis(200)),
+        "wal" => memallocator::gaps::run_wal(Duration::from_millis(200)),
+        "cache" => memallocator::gaps::run_cache(),
         "help" | "--help" | "-h" => help(),
         other => {
             eprintln!("unknown command {other}\n");
@@ -28,6 +32,10 @@ fn help() {
   cargo run --release -- cpu
   cargo run --release -- gpu
   cargo run --release -- quick
+  cargo run --release -- gaps
+  cargo run --release -- epoch
+  cargo run --release -- wal
+  cargo run --release -- cache
   cargo test"
     );
 }
