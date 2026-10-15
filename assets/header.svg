@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 300" role="img" aria-label="memallocator: thread cache 343 million ops per second, false sharing 49 nanoseconds down to 2.5, group commit 32 records per sync">
+  <rect width="1200" height="300" fill="#101410"/>
+  <rect x="24" y="24" width="1152" height="252" fill="none" stroke="#243028" stroke-width="1"/>
+  <text x="48" y="78" fill="#e7f6df" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="28" letter-spacing="6">MEMALLOCATOR</text>
+  <text x="48" y="112" fill="#8ea397" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="16">a measured study of contention, ordering, and durability</text>
+  <line x1="48" y1="140" x2="1152" y2="140" stroke="#243028"/>
+  <text x="48" y="188" fill="#d6ff4a" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="32">343 M/s</text>
+  <text x="48" y="216" fill="#8ea397" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="14">lock-free + thread cache</text>
+  <text x="48" y="238" fill="#5f7368" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="13">same freelist, no cache: 1.3 M/s</text>
+  <text x="430" y="188" fill="#d6ff4a" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="32">49 ns ’ 2.5 ns</text>
+  <text x="430" y="216" fill="#8ea397" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="14">false sharing, 8 counters</text>
+  <text x="430" y="238" fill="#5f7368" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="13">one cache line vs 128-byte padding</text>
+  <text x="860" y="188" fill="#d6ff4a" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="32">32 / sync</text>
+  <text x="860" y="216" fill="#8ea397" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="14">group commit</text>
+  <text x="860" y="238" fill="#5f7368" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="13">sync each record: 1 / sync</text>
+</svg>
