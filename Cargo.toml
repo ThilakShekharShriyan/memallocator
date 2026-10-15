@@ -1,0 +1,15 @@
+[package]
+name = "memallocator"
+version = "0.1.0"
+edition = "2021"
+description = "CPU slab allocators, lock-free structures, and a Metal GPU suballocator"
+license = "MIT"
+publish = false
+
+[dependencies]
+metal = "0.31"
+
+[profile.release]
+lto = "thin"
+codegen-units = 1
+opt-level = 3
